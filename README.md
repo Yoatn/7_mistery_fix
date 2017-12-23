@@ -15,23 +15,9 @@
 
 Например:
 ```python
-from math import sqrt
+
 import sys
-
-
-def get_roots(a, b, c):
-    discriminant = b ** 2 - 4 * a * c
-    if discriminant < 0:
-        return None, None
-    root1 = (-b - sqrt(discriminant)) / (2 * a)
-    root2 = (-b + sqrt(discriminant)) / (2 * a)
-
-    if discriminant == 0:
-        return root1, None
-
-    else:
-        return root1, root2
-
+import quadratic_equation
 
 a, b, c = int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])
 print(get_roots(a, b, c))
@@ -46,6 +32,19 @@ print(get_roots(a, b, c))
 `name@localhost: ~/python3 quadratic_equation.py -2 4 -6`
 
 `(None, None)`
+
+Запуск тестов:
+```
+name@localhost: ~/python3 tests.py
+```
+
+```
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+```
 
 
 ### Цели проекта
